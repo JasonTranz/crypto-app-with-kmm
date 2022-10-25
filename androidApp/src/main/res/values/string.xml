@@ -1,0 +1,8 @@
+<resources>
+    // bottom navigation
+    <string name="bottom_navigation_home">Home</string>
+    <string name="bottom_navigation_portfolio">Portfolio</string>
+    <string name="bottom_navigation_search">Search</string>
+    <string name="bottom_navigation_explore">Explore</string>
+    <string name="bottom_navigation_menu">Menu</string>
+</resources>
