@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.0"
+        kotlinCompilerExtensionVersion = "1.3.2"
     }
     packagingOptions {
         resources {
@@ -33,15 +33,24 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling:1.2.1")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.2.1")
-    implementation("androidx.compose.foundation:foundation:1.2.1")
-    implementation("androidx.compose.material:material:1.2.1")
-    implementation("androidx.activity:activity-compose:1.6.0")
 
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.26.5-rc")
-    implementation("com.google.accompanist:accompanist-navigation-animation:0.26.5-rc")
+    implementation(libs.compose.ui.ui)
+    implementation(libs.compose.ui.util)
+    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.foundation.foundation)
+    implementation(libs.compose.foundation.layout)
+    implementation(libs.compose.material.material)
 
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation(libs.intuit.ssp.android)
+    implementation(libs.intuit.sdp.android)
+
+    implementation(libs.accompanist.systemuicontroller)
+    implementation(libs.accompanist.navigation)
+    implementation(libs.accompanist.insets)
+    implementation(libs.accompanist.pager)
+
+    implementation(libs.kotlin.coroutine.android)
+
+    implementation(libs.io.coil)
+    implementation(libs.io.koin.android)
 }

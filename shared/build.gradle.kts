@@ -8,8 +8,7 @@ plugins {
 
 kotlin {
     android()
-    iosX64()
-    iosArm64()
+    // Note: iosSimulatorArm64 target requires that all dependencies have M1 support
     iosSimulatorArm64()
 
     cocoapods {
@@ -22,9 +21,8 @@ kotlin {
             baseName = "shared"
         }
     }
-    
+
     sourceSets {
-        val ktorVersion = "2.1.2"
         all {
             languageSettings.apply {
                 optIn("kotlin.RequiresOptIn")
@@ -34,17 +32,16 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-                implementation("com.google.code.gson:gson:2.9.1")
+                implementation(libs.kotlin.coroutine.core)
 
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+                implementation(libs.io.ktor.client.cio)
+                implementation(libs.io.ktor.client.core)
+                implementation(libs.io.ktor.client.logging)
+                implementation(libs.io.ktor.client.serialization)
+                implementation(libs.io.ktor.client.content.negotiation)
+                implementation(libs.io.ktor.serialization.kotlinx.json)
 
-                implementation("io.ktor:ktor-client-cio:$ktorVersion")
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-client-logging:$ktorVersion")
-                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation(libs.io.koin.core)
             }
         }
         val commonTest by getting {
@@ -54,31 +51,22 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+                implementation(libs.io.ktor.client.okhttp)
+                implementation(libs.androidx.lifecycle.viewmodel.ktx)
             }
         }
         val androidTest by getting
-        val iosX64Main by getting
-        val iosArm64Main by getting
-        val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependsOn(commonMain)
-            iosX64Main.dependsOn(this)
-            iosArm64Main.dependsOn(this)
-            iosSimulatorArm64Main.dependsOn(this)
-
             dependencies {
-                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
+                implementation(libs.io.ktor.client.darwin)
             }
         }
-        val iosX64Test by getting
-        val iosArm64Test by getting
-        val iosSimulatorArm64Test by getting
+        val iosSimulatorArm64Main by getting {
+            dependsOn(iosMain)
+        }
         val iosTest by creating {
             dependsOn(commonTest)
-            iosX64Test.dependsOn(this)
-            iosArm64Test.dependsOn(this)
-            iosSimulatorArm64Test.dependsOn(this)
         }
     }
 }
