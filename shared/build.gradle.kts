@@ -42,6 +42,7 @@ kotlin {
                 implementation(libs.io.ktor.serialization.kotlinx.json)
 
                 implementation(libs.io.koin.core)
+                implementation(libs.firestore.shared)
             }
         }
         val commonTest by getting {
@@ -53,6 +54,7 @@ kotlin {
             dependencies {
                 implementation(libs.io.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.viewmodel.ktx)
+                implementation(libs.firestore.android)
             }
         }
         val androidTest by getting

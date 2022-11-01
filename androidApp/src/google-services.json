@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46517895022",
+    "project_id": "mota-production",
+    "storage_bucket": "mota-production.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46517895022:android:f2c75f1a991bc5acfa4b7f",
+        "android_client_info": {
+          "package_name": "com.cryptochain.mota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46517895022-vlsajnu6h8prnec3he3j930l5pp3kcrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9v1546bDWeTVjTG413FhZxv90tSKOlak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46517895022-vlsajnu6h8prnec3he3j930l5pp3kcrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
