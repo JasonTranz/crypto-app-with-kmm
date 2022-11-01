@@ -20,6 +20,9 @@ coroutines = "1.6.4"
 okhttp = "3.12.13"
 coil = "2.2.2"
 
+firestore-shared = "0.2.5"
+firestore-android = "24.4.0"
+
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
 
@@ -59,3 +62,6 @@ io-ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref =
 io-ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
 io-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+firestore-shared = { module = "co.touchlab:firestore", version.ref = "firestore-shared" }
+firestore-android = { module = "com.google.firebase:firebase-firestore", version.ref = "firestore-android" }

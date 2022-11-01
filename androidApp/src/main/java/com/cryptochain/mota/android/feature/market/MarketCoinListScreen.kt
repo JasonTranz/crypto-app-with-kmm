@@ -33,11 +33,11 @@ import com.cryptochain.mota.android.component.mediumSpace
 import com.cryptochain.mota.android.component.smallSpace
 import com.cryptochain.mota.android.component.tinySpace
 import com.cryptochain.mota.android.util.UnitUtil.formatPercentage
-import com.cryptochain.mota.model.CoinResponse
+import com.cryptochain.mota.entity.Coin
 
 @Composable
 fun MarketCoinListScreen(
-    coins: List<CoinResponse>,
+    coins: List<Coin>,
     navController: NavController
 ) {
 
@@ -110,7 +110,7 @@ fun MarketCoinListScreen(
 @Composable
 private fun CoinItem(
     modifier: Modifier = Modifier,
-    coin: CoinResponse,
+    coin: Coin,
     index: Int,
 ) {
     val height = remember { mutableStateOf(0.dp) }
@@ -142,7 +142,7 @@ private fun CoinItem(
 
             Column {
                 BoldText(
-                    content = coin.name.toString(),
+                    content = coin.name,
                     fontSize = getFontSize13sp(),
                 )
 
@@ -152,7 +152,7 @@ private fun CoinItem(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     RegularText(
-                        content = coin.symbol.toString().uppercase(),
+                        content = coin.symbol.uppercase(),
                         fontSize = getFontSize11sp()
                     )
                 }
@@ -167,7 +167,7 @@ private fun CoinItem(
             verticalAlignment = Alignment.CenterVertically
         ) {
             BoldText(
-                content = coin.currentPrice.toString(),
+                content = coin.price.toString(),
                 fontSize = getFontSize13sp()
             )
         }
@@ -181,7 +181,7 @@ private fun CoinItem(
         ) {
             SemiBoldText(
                 content = coin.priceChangePercentage24h.formatPercentage(),
-                color = if (coin.priceChangePercentage24h!! > 0.0) MaterialTheme.colors.surface else MaterialTheme.colors.error,
+                color = if (coin.priceChangePercentage24h > 0.0) MaterialTheme.colors.surface else MaterialTheme.colors.error,
                 fontSize = getFontSize12sp()
             )
         }

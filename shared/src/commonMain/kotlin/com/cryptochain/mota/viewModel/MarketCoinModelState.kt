@@ -1,7 +1,7 @@
 package com.cryptochain.mota.viewModel
 
-import com.cryptochain.mota.model.CoinResponse
+import com.cryptochain.mota.entity.Coin
 
 data class MarketCoinModelState(
-    val coins: List<CoinResponse> = emptyList()
+    val coins: List<Coin> = emptyList(),
 )
