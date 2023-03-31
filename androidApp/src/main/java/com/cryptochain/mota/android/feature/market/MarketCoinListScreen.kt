@@ -1,5 +1,6 @@
 package com.cryptochain.mota.android.feature.market
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -40,6 +41,7 @@ fun MarketCoinListScreen(
     coins: List<Coin>,
     navController: NavController
 ) {
+    BackHandler(false) { }
 
     Column(
         modifier = Modifier
@@ -47,54 +49,52 @@ fun MarketCoinListScreen(
             .padding(horizontal = mediumSpace()),
         verticalArrangement = Arrangement.Top
     ) {
-        LazyColumn {
-            item {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                ) {
-                    Row(modifier = Modifier.weight(0.07f)) {
-                        BoldText(
-                            content = "#",
-                            fontSize = getFontSize13sp(),
-                            color = MaterialTheme.colors.secondaryVariant
-                        )
-                    }
-                    Row(
-                        modifier = Modifier.weight(0.43f),
-                        horizontalArrangement = Arrangement.Start
-                    ) {
-                        Spacer(modifier = Modifier.width(35.dp + smallSpace()))
-
-                        BoldText(
-                            content = "Coin",
-                            fontSize = getFontSize13sp(),
-                            color = MaterialTheme.colors.secondaryVariant
-                        )
-                    }
-                    Row(
-                        modifier = Modifier.weight(0.3f),
-                        horizontalArrangement = Arrangement.End
-                    ) {
-                        BoldText(
-                            content = "Price",
-                            fontSize = getFontSize13sp(),
-                            color = MaterialTheme.colors.secondaryVariant
-                        )
-                    }
-                    Row(
-                        modifier = Modifier.weight(0.2f),
-                        horizontalArrangement = Arrangement.End
-                    ) {
-                        BoldText(
-                            content = "24h",
-                            fontSize = getFontSize13sp(),
-                            color = MaterialTheme.colors.secondaryVariant
-                        )
-                    }
-                }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+        ) {
+            Row(modifier = Modifier.weight(0.07f)) {
+                BoldText(
+                    content = "#",
+                    fontSize = getFontSize13sp(),
+                    color = MaterialTheme.colors.secondaryVariant
+                )
             }
+            Row(
+                modifier = Modifier.weight(0.43f),
+                horizontalArrangement = Arrangement.Start
+            ) {
+                Spacer(modifier = Modifier.width(35.dp + smallSpace()))
 
+                BoldText(
+                    content = "Coin",
+                    fontSize = getFontSize13sp(),
+                    color = MaterialTheme.colors.secondaryVariant
+                )
+            }
+            Row(
+                modifier = Modifier.weight(0.3f),
+                horizontalArrangement = Arrangement.End
+            ) {
+                BoldText(
+                    content = "Price",
+                    fontSize = getFontSize13sp(),
+                    color = MaterialTheme.colors.secondaryVariant
+                )
+            }
+            Row(
+                modifier = Modifier.weight(0.2f),
+                horizontalArrangement = Arrangement.End
+            ) {
+                BoldText(
+                    content = "24h",
+                    fontSize = getFontSize13sp(),
+                    color = MaterialTheme.colors.secondaryVariant
+                )
+            }
+        }
+
+        LazyColumn {
             itemsIndexed(coins) { index, item ->
                 CoinItem(coin = item, index = index)
                 Divider(
