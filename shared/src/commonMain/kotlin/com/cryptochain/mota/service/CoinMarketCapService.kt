@@ -6,6 +6,7 @@ import com.cryptochain.mota.model.CoinCMCResponse
 import io.ktor.client.call.body
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.get
+import io.ktor.client.request.header
 import io.ktor.http.encodedPath
 import io.ktor.http.takeFrom
 
@@ -36,6 +37,7 @@ class CoinMarketCapService : CoinMarketCapApi {
         return try {
             client.get {
                 coin(GET_COIN_MARKET_LIST)
+                header("X_CMC_PRO_API_KEY", X_CMC_PRO_API_KEY)
             }.body()
         } catch (e: Exception) {
             println("getCoinList: ${e.message}")

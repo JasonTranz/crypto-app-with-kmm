@@ -1,16 +1,24 @@
 import SwiftUI
-import shared
+import SharedModule
+import KMMViewModelSwiftUI
 
 struct ContentView: View {
-    let greet = Greeting().greeting()
+    @StateViewModel var viewModel: MarketCoinListViewModel = CoinListViewModel()
+    
+    init() {
+        viewModel.fetchMarketCoinList(perPage: 100, page: 1)
+    }
 
     var body: some View {
-        Text(greet)
+        VStack {
+            Text("Error msg: " + viewModel.marketCoinListViewModelState.errorMsg)
+            Text("\(viewModel.marketCoinListViewModelState.coins.count)")
+            if (viewModel.marketCoinListViewModelState.coins.isEmpty) {
+                Text("Is Empty")
+            } else {
+                Text("Is Not Empty")
+            }
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

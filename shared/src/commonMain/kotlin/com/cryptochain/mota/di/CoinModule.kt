@@ -8,8 +8,8 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 val coinModule = module {
-    singleOf(::MarketCoinListViewModel)
-    singleOf(::CoinRepository)
     singleOf(::CoingeckoService)
+    singleOf(::CoinRepository)
+    singleOf(::MarketCoinListViewModel)
     singleOf(::CoinMarketCapService)
 }
