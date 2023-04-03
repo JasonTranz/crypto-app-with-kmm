@@ -10,11 +10,11 @@ import com.cryptochain.mota.android.feature.main.MainScreen
 import com.cryptochain.mota.android.theme.ApplicationTheme
 import com.cryptochain.mota.viewModel.MarketCoinListViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class MainActivity : ComponentActivity(), KoinComponent {
-    private val marketCoinListViewModel: MarketCoinListViewModel by viewModel()
+    private val viewModel: MarketCoinListViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +39,10 @@ class MainActivity : ComponentActivity(), KoinComponent {
                     )
                 }
 
-                MainScreen(marketCoinListViewModel)
+                MainScreen(viewModel)
             }
         }
     }
 }
+
+

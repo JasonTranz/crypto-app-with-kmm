@@ -19,7 +19,7 @@ fun HomeScreen(
     LaunchedEffect(true) {
         marketCoinListViewModel.fetchMarketCoinList()
     }
-    
+
     MarketCoinListScreen(
         coins = marketCoinListViewModelDataState.coins,
         navController = navController
