@@ -1,9 +1,9 @@
 package com.cryptochain.mota.repository
 
-import com.cryptochain.mota.model.CoinResponse
+import com.cryptochain.mota.entity.CoinGeckoResponse
 
 class FirebaseRepository {
-    suspend fun getListFromFirebase(): List<CoinResponse> {
+    suspend fun getListFromFirebase(): List<CoinGeckoResponse> {
 
 //        val reponse = getFirebaseInstance()
 //            .collection("Users")

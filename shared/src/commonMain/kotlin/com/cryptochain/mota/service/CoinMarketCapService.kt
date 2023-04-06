@@ -2,7 +2,7 @@ package com.cryptochain.mota.service
 
 import com.cryptochain.mota.api.CoinMarketCapApi
 import com.cryptochain.mota.httpClient
-import com.cryptochain.mota.model.CoinCMCResponse
+import com.cryptochain.mota.entity.CoinCMCResponse
 import io.ktor.client.call.body
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.get

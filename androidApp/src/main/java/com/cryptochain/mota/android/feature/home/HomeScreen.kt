@@ -17,7 +17,7 @@ fun HomeScreen(
     val marketCoinListViewModelDataState by remember { marketCoinListViewModel.marketCoinListViewModelState }.collectAsState()
 
     LaunchedEffect(true) {
-        marketCoinListViewModel.fetchMarketCoinList()
+        marketCoinListViewModel.getCoinList()
     }
 
     MarketCoinListScreen(

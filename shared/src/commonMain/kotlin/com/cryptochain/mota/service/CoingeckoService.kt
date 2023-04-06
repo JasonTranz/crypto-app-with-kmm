@@ -1,8 +1,8 @@
 package com.cryptochain.mota.service
 
 import com.cryptochain.mota.api.CoingeckoApi
+import com.cryptochain.mota.entity.CoinGeckoResponse
 import com.cryptochain.mota.httpClient
-import com.cryptochain.mota.model.CoinResponse
 import io.ktor.client.call.body
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.get
@@ -35,7 +35,7 @@ class CoingeckoService : CoingeckoApi {
         return this
     }
 
-    override suspend fun getCoinList(perPage: Int, page: Int): List<CoinResponse> {
+    override suspend fun getCoinList(perPage: Int, page: Int): List<CoinGeckoResponse> {
         return try {
             client.get {
                 coin(GET_COIN_MARKET_LIST).url {
@@ -45,7 +45,7 @@ class CoingeckoService : CoingeckoApi {
                 }
             }.body()
         } catch (e: Exception) {
-            println("getCoinList: ${e.message}")
+            println("getCoinList exception: ${e.message}")
             emptyList()
         }
     }
