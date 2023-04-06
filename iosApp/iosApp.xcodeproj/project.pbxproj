@@ -14,6 +14,7 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		CE14682029DAB53F007882E0 /* KMMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14681F29DAB53F007882E0 /* KMMViewModel.swift */; };
 		CE14682229DAB5C7007882E0 /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */; };
+		CE5702EF29DEA44A00741DB0 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */; };
 		CE6C4DB529DBDDB7009AE05A /* KMPNativeCoroutinesAsync in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB429DBDDB7009AE05A /* KMPNativeCoroutinesAsync */; };
 		CE6C4DB729DBDDB7009AE05A /* KMPNativeCoroutinesCombine in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB629DBDDB7009AE05A /* KMPNativeCoroutinesCombine */; };
 		CE6C4DB929DBDDB7009AE05A /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB829DBDDB7009AE05A /* KMPNativeCoroutinesCore */; };
@@ -34,6 +35,7 @@
 		85563590736CC546E3513CA4 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CE14681F29DAB53F007882E0 /* KMMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMViewModel.swift; sourceTree = "<group>"; };
 		CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */,
+				CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5702EF29DEA44A00741DB0 /* AsyncImage.swift in Sources */,
 				CE14682029DAB53F007882E0 /* KMMViewModel.swift in Sources */,
 				CE14682229DAB5C7007882E0 /* CoinListViewModel.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,

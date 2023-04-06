@@ -1,6 +1,6 @@
 package com.cryptochain.mota.viewModel
 
-import com.cryptochain.mota.entity.Coin
+import com.cryptochain.mota.model.Coin
 
 data class MarketCoinModelState(
     val coins: List<Coin> = listOf(),

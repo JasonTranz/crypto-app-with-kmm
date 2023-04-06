@@ -1,4 +1,4 @@
-package com.cryptochain.mota.model
+package com.cryptochain.mota.entity
 
 import kotlinx.serialization.SerialName
 

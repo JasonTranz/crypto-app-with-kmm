@@ -1,6 +1,6 @@
 package com.cryptochain.mota.repository
 
-import com.cryptochain.mota.entity.Coin
+import com.cryptochain.mota.model.Coin
 import com.cryptochain.mota.mapper.toCoin
 import com.cryptochain.mota.service.CoinMarketCapService
 import com.cryptochain.mota.service.CoingeckoService

@@ -1,10 +1,10 @@
 package com.cryptochain.mota.mapper
 
-import com.cryptochain.mota.entity.Coin
-import com.cryptochain.mota.model.CoinCMCResponse
-import com.cryptochain.mota.model.CoinResponse
+import com.cryptochain.mota.entity.CoinCMCResponse
+import com.cryptochain.mota.entity.CoinGeckoResponse
+import com.cryptochain.mota.model.Coin
 
-fun CoinResponse.toCoin(): Coin {
+fun CoinGeckoResponse.toCoin(): Coin {
     return Coin(
         id = this.id ?: "",
         name = this.name ?: "",

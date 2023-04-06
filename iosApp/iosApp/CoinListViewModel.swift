@@ -7,13 +7,19 @@
 //
 
 import Foundation
+import SwiftUI
 import SharedModule
 
 class CoinListViewModel: SharedModule.MarketCoinListViewModel {
-    
-    func apiCalling(){
-        self.fetchMarketCoinList(perPage: 10, page: 1)
+        
+    override func getCoinList() async throws -> [Coin] {
+        var coins = [Coin]()
+        do {
+            coins = try await self.fetchMarketCoinList(perPage: 100, page: 1)
+        } catch {
+            coins = [Coin]()
+        }
+        
+        return coins
     }
-    
-//    @Published var coins: MarketCoinModelState
 }

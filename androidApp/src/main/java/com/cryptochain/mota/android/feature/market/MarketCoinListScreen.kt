@@ -34,7 +34,7 @@ import com.cryptochain.mota.android.component.mediumSpace
 import com.cryptochain.mota.android.component.smallSpace
 import com.cryptochain.mota.android.component.tinySpace
 import com.cryptochain.mota.android.util.UnitUtil.formatPercentage
-import com.cryptochain.mota.entity.Coin
+import com.cryptochain.mota.model.Coin
 
 @Composable
 fun MarketCoinListScreen(
