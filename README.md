@@ -1,10 +1,6 @@
-# Mota
+## Crypto currency application
 
-## This is a crypto currency application write by KMM project.
-
-- I want to create a simple cryptocurrency app using KMM to learn and develop coding skills.
-- I'm an investor so I want to track the price of crypto following personal habits.
-- You can deep-down customize notifications of price.
+- Apply MVVM design pattern to KMM project.
 
 ## Table of Contents
 
@@ -21,7 +17,7 @@
 
 ## License
 
-🏆 Apache License 2.0
+🏆 MIT
 
 ## Badges
 
