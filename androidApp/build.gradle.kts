@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.application")
     kotlin("android")
+    id("com.android.application")
 }
 
 android {
@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.4.0"
     }
     packagingOptions {
         resources {
@@ -53,4 +53,5 @@ dependencies {
 
     implementation(libs.io.coil)
     implementation(libs.io.koin.android)
+    implementation(libs.kmm.viewmodel.core)
 }

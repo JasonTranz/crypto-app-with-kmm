@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034E8D60C1633787C9A0FE36 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0526668157504C3B09DC9759 /* Pods_iosApp.framework */; };
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
+		107F060B1B2D59CCFA00B74E /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7657C2C01ECB075FD799F95E /* Pods_iosApp.framework */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		CE14682029DAB53F007882E0 /* KMMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14681F29DAB53F007882E0 /* KMMViewModel.swift */; };
+		CE14682229DAB5C7007882E0 /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */; };
+		CE5702EF29DEA44A00741DB0 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */; };
+		CE6C4DB529DBDDB7009AE05A /* KMPNativeCoroutinesAsync in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB429DBDDB7009AE05A /* KMPNativeCoroutinesAsync */; };
+		CE6C4DB729DBDDB7009AE05A /* KMPNativeCoroutinesCombine in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB629DBDDB7009AE05A /* KMPNativeCoroutinesCombine */; };
+		CE6C4DB929DBDDB7009AE05A /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DB829DBDDB7009AE05A /* KMPNativeCoroutinesCore */; };
+		CE6C4DBB29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DBA29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift */; };
+		CE90C68029DAD6F1003C6751 /* KMMViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = CE90C67F29DAD6F1003C6751 /* KMMViewModelCore */; };
+		CE90C68229DAD6F1003C6751 /* KMMViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CE90C68129DAD6F1003C6751 /* KMMViewModelSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0526668157504C3B09DC9759 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1B41ED9C5226AF8E56895202 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		4601E5684A03A0A113B3A858 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE7E7EE4D6C178790A5CB237 /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
+		7657C2C01ECB075FD799F95E /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85563590736CC546E3513CA4 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CE14681F29DAB53F007882E0 /* KMMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMViewModel.swift; sourceTree = "<group>"; };
+		CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +43,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				034E8D60C1633787C9A0FE36 /* Pods_iosApp.framework in Frameworks */,
+				CE6C4DB529DBDDB7009AE05A /* KMPNativeCoroutinesAsync in Frameworks */,
+				CE6C4DB729DBDDB7009AE05A /* KMPNativeCoroutinesCombine in Frameworks */,
+				CE6C4DB929DBDDB7009AE05A /* KMPNativeCoroutinesCore in Frameworks */,
+				CE6C4DBB29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift in Frameworks */,
+				CE90C68029DAD6F1003C6751 /* KMMViewModelCore in Frameworks */,
+				CE90C68229DAD6F1003C6751 /* KMMViewModelSwiftUI in Frameworks */,
+				107F060B1B2D59CCFA00B74E /* Pods_iosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +59,7 @@
 		058557D7273AAEEB004C7B11 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				CE14681F29DAB53F007882E0 /* KMMViewModel.swift */,
 				058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -52,7 +71,7 @@
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				B326DD63A71CD335ACC2D900 /* Pods */,
-				9EECB28C49ADEE99BF4E802B /* Frameworks */,
+				9E02167BAC2A928163313D71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,14 +91,16 @@
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */,
+				CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
 		};
-		9EECB28C49ADEE99BF4E802B /* Frameworks */ = {
+		9E02167BAC2A928163313D71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0526668157504C3B09DC9759 /* Pods_iosApp.framework */,
+				7657C2C01ECB075FD799F95E /* Pods_iosApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,10 +108,9 @@
 		B326DD63A71CD335ACC2D900 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1B41ED9C5226AF8E56895202 /* Pods-iosApp.debug.xcconfig */,
-				EE7E7EE4D6C178790A5CB237 /* Pods-iosApp.release.xcconfig */,
+				85563590736CC546E3513CA4 /* Pods-iosApp.debug.xcconfig */,
+				4601E5684A03A0A113B3A858 /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -101,16 +121,25 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7555FFA5242A565B00829871 /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
-				1B2B7333344F798476D3CD63 /* [CP] Check Pods Manifest.lock */,
+				6028C3E85F4F188937D7F3EA /* [CP] Check Pods Manifest.lock */,
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				431E16C45FD6BF527F33DDA0 /* Frameworks */,
+				EB416126CECCE076631910BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = iosApp;
+			packageProductDependencies = (
+				CE90C67F29DAD6F1003C6751 /* KMMViewModelCore */,
+				CE90C68129DAD6F1003C6751 /* KMMViewModelSwiftUI */,
+				CE6C4DB429DBDDB7009AE05A /* KMPNativeCoroutinesAsync */,
+				CE6C4DB629DBDDB7009AE05A /* KMPNativeCoroutinesCombine */,
+				CE6C4DB829DBDDB7009AE05A /* KMPNativeCoroutinesCore */,
+				CE6C4DBA29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift */,
+			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +168,10 @@
 				Base,
 			);
 			mainGroup = 7555FF72242A565900829871;
+			packageReferences = (
+				CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */,
+				CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
+			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -161,7 +194,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B2B7333344F798476D3CD63 /* [CP] Check Pods Manifest.lock */ = {
+		6028C3E85F4F188937D7F3EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,6 +216,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB416126CECCE076631910BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -190,6 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5702EF29DEA44A00741DB0 /* AsyncImage.swift in Sources */,
+				CE14682029DAB53F007882E0 /* KMMViewModel.swift in Sources */,
+				CE14682229DAB5C7007882E0 /* CoinListViewModel.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
@@ -316,7 +369,7 @@
 		};
 		7555FFA6242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B41ED9C5226AF8E56895202 /* Pods-iosApp.debug.xcconfig */;
+			baseConfigurationReference = 85563590736CC546E3513CA4 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,7 +389,7 @@
 		};
 		7555FFA7242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE7E7EE4D6C178790A5CB237 /* Pods-iosApp.release.xcconfig */;
+			baseConfigurationReference = 4601E5684A03A0A113B3A858 /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +429,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMP-NativeCoroutines.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMM-ViewModel.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE6C4DB429DBDDB7009AE05A /* KMPNativeCoroutinesAsync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesAsync;
+		};
+		CE6C4DB629DBDDB7009AE05A /* KMPNativeCoroutinesCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCombine;
+		};
+		CE6C4DB829DBDDB7009AE05A /* KMPNativeCoroutinesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCore;
+		};
+		CE6C4DBA29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesRxSwift;
+		};
+		CE90C67F29DAD6F1003C6751 /* KMMViewModelCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */;
+			productName = KMMViewModelCore;
+		};
+		CE90C68129DAD6F1003C6751 /* KMMViewModelSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */;
+			productName = KMMViewModelSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7555FF73242A565900829871 /* Project object */;
 }

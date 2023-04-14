@@ -1,10 +1,10 @@
-package com.cryptochain.mota.model
+package com.cryptochain.mota.entity
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CoinResponse(
+data class CoinGeckoResponse(
     @SerialName("id") val id: String? = null,
     @SerialName("symbol") val symbol: String? = null,
     @SerialName("name") val name: String? = null,
