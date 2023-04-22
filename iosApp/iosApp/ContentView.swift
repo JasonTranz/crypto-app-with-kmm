@@ -19,7 +19,7 @@ struct ContentView: View {
                     Text("24h")
                         .frame(width: geo.size.width * 0.2)
                 }.frame(maxWidth: .infinity).fixedSize()
-            }.frame(width: .infinity, height: 20)
+            }.frame(maxWidth: .infinity).frame(height: 20)
                 .padding(.trailing, 16).padding(.leading, 16)
             
             ScrollView {
@@ -83,7 +83,7 @@ struct CoinItem: View {
                     .foregroundColor(percentageColor)
                 
             }.frame(maxWidth: .infinity).fixedSize()
-        }.frame(width: .infinity, height: 25)
+        }.frame(maxWidth: .infinity).frame(height: 25)
             .padding(.trailing, 16)
             .padding(.leading, 16)
             .padding(.bottom, 14)

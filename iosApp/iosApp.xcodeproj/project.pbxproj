@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
-		107F060B1B2D59CCFA00B74E /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7657C2C01ECB075FD799F95E /* Pods_iosApp.framework */; };
+		107F060B1B2D59CCFA00B74E /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7657C2C01ECB075FD799F95E /* Pods_iosApp.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		CE14682029DAB53F007882E0 /* KMMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14681F29DAB53F007882E0 /* KMMViewModel.swift */; };
@@ -125,7 +125,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF79242A565900829871 /* Resources */,
 				431E16C45FD6BF527F33DDA0 /* Frameworks */,
-				EB416126CECCE076631910BE /* [CP] Embed Pods Frameworks */,
+				748C1B69FB366CDE1BDAA7E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,8 +169,8 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */,
-				CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
+				CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel.git" */,
+				CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -216,7 +216,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB416126CECCE076631910BE /* [CP] Embed Pods Frameworks */ = {
+		748C1B69FB366CDE1BDAA7E3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,7 +431,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */ = {
+		CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rickclephas/KMP-NativeCoroutines.git";
 			requirement = {
@@ -439,7 +439,7 @@
 				kind = branch;
 			};
 		};
-		CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */ = {
+		CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rickclephas/KMM-ViewModel.git";
 			requirement = {
@@ -452,32 +452,32 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CE6C4DB429DBDDB7009AE05A /* KMPNativeCoroutinesAsync */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */;
 			productName = KMPNativeCoroutinesAsync;
 		};
 		CE6C4DB629DBDDB7009AE05A /* KMPNativeCoroutinesCombine */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */;
 			productName = KMPNativeCoroutinesCombine;
 		};
 		CE6C4DB829DBDDB7009AE05A /* KMPNativeCoroutinesCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */;
 			productName = KMPNativeCoroutinesCore;
 		};
 		CE6C4DBA29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			package = CE6C4DB329DBDDB7009AE05A /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines.git" */;
 			productName = KMPNativeCoroutinesRxSwift;
 		};
 		CE90C67F29DAD6F1003C6751 /* KMMViewModelCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */;
+			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel.git" */;
 			productName = KMMViewModelCore;
 		};
 		CE90C68129DAD6F1003C6751 /* KMMViewModelSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel" */;
+			package = CE90C67E29DAD6F1003C6751 /* XCRemoteSwiftPackageReference "KMM-ViewModel.git" */;
 			productName = KMMViewModelSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
