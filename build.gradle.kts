@@ -27,7 +27,8 @@ buildscript {
 
     dependencies {
         // Add the dependency for the Google services Gradle plugin
-        classpath("com.google.gms:google-services:4.3.14")
+        classpath(libs.google.services)
+        classpath(libs.sql.delight.gradle)
     }
 }
 

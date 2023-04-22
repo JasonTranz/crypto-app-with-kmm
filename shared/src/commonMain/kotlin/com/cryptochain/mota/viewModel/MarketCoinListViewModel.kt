@@ -1,5 +1,8 @@
 package com.cryptochain.mota.viewModel
 
+import com.cryptochain.mota.db.Database
+import com.cryptochain.mota.mapper.toCoin
+import com.cryptochain.mota.mapper.toCoinLocal
 import com.cryptochain.mota.model.Coin
 import com.cryptochain.mota.repository.CoinRepository
 import com.rickclephas.kmm.viewmodel.KMMViewModel
@@ -16,6 +19,7 @@ import org.koin.core.component.inject
 open class MarketCoinListViewModel : KMMViewModel(), KoinComponent {
 
     private val coinRepository: CoinRepository by inject()
+    private val database: Database by inject()
 
     private val _marketCoinListViewModelState = MutableStateFlow(viewModelScope, MarketCoinModelState())
 
@@ -32,8 +36,7 @@ open class MarketCoinListViewModel : KMMViewModel(), KoinComponent {
 
     suspend fun fetchMarketCoinList(perPage: Int = 100, page: Int = 1): List<Coin> {
         return try {
-            val coins = coinRepository.getCoinList(perPage, page)
-            coins
+            coinRepository.getCoinList(perPage, page)
         } catch (ex: Exception) {
             emptyList()
         }
@@ -41,8 +44,16 @@ open class MarketCoinListViewModel : KMMViewModel(), KoinComponent {
 
     open suspend fun getCoinList(): List<Coin> {
         return try {
-            val coins = coinRepository.getCoinList(100, 1)
-            _marketCoinListViewModelState.update { it.copy(coins = coins) }
+            var coins = database.getCoins().map { it.toCoin() }
+
+            if (coins.isNotEmpty()) {
+                _marketCoinListViewModelState.update { it.copy(coins = coins) }
+            } else {
+                coins = coinRepository.getCoinList(100, 1)
+                _marketCoinListViewModelState.update { it.copy(coins = coins) }
+                database.addCoins(coins.map { it.toCoinLocal() })
+            }
+
             coins
         } catch (ex: Exception) {
             emptyList()
