@@ -6,7 +6,7 @@
       "location" : "https://github.com/rickclephas/KMM-ViewModel.git",
       "state" : {
         "branch" : "master",
-        "revision" : "ee4a96b11cab114d0abb43acddcb9edbc75f922c"
+        "revision" : "f9c3cdd8bb0824ad2af9c52e35e4502056dc0cb3"
       }
     },
     {
@@ -15,7 +15,7 @@
       "location" : "https://github.com/rickclephas/KMP-NativeCoroutines.git",
       "state" : {
         "branch" : "master",
-        "revision" : "c889c41d3f0f719c628f5a1ae2060a3b39fbfc2e"
+        "revision" : "59ce4b45b425d148a22def2917142385b323041b"
       }
     },
     {

@@ -4,5 +4,5 @@ import com.cryptochain.mota.model.Coin
 
 data class MarketCoinModelState(
     val coins: List<Coin> = listOf(),
-    val errorMsg: String = ""
+    val errorMsg: String? = null
 )

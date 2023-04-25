@@ -54,4 +54,6 @@ dependencies {
     implementation(libs.io.coil)
     implementation(libs.io.koin.android)
     implementation(libs.kmm.viewmodel.core)
+
+    implementation(libs.sql.delight.android)
 }

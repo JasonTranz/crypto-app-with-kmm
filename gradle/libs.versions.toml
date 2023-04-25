@@ -11,6 +11,8 @@ kmmViewmodelCore = "1.0.0-ALPHA-3"
 koin = "3.2.0"
 ktor = "2.1.2"
 
+google-services = "4.3.14"
+
 # gradlePlugin and lint need to be updated together
 gradlePlugin = "7.3.1"
 lintMinCompose = "30.0.0"
@@ -24,8 +26,9 @@ coil = "2.2.2"
 firestore-shared = "0.2.5"
 firestore-android = "24.4.5"
 
-ksp = "1.8.10-1.0.9"
+ksp = "1.8.0-1.0.9"
 nativecoroutines = "1.0.0-ALPHA-5"
+sql-delight = "1.5.5"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
@@ -51,6 +54,8 @@ kmm-viewmodel-core = { module = "com.rickclephas.kmm:kmm-viewmodel-core", versio
 kotlin-coroutine-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 
+google-services = { module = "com.google.gms:google-services", version.ref = "google-services" }
+
 intuit-ssp-android = { module = "com.intuit.ssp:ssp-android", version.ref = "intuit" }
 intuit-sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "intuit" }
 
@@ -70,6 +75,11 @@ io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotl
 
 firestore-shared = { module = "co.touchlab:firestore", version.ref = "firestore-shared" }
 firestore-android = { module = "com.google.firebase:firebase-firestore", version.ref = "firestore-android" }
+
+sql-delight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sql-delight" }
+sql-delight-gradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sql-delight" }
+sql-delight-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sql-delight" }
+sql-delight-ios = { module = "com.squareup.sqldelight:native-driver", version.ref = "sql-delight" }
 
 [plugins]
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }

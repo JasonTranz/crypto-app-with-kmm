@@ -5,6 +5,8 @@ import com.cryptochain.mota.mapper.toCoin
 import com.cryptochain.mota.service.CoinMarketCapService
 import com.cryptochain.mota.service.CoingeckoService
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 
 @OptIn(FlowPreview::class)
 class CoinRepository(
@@ -12,8 +14,11 @@ class CoinRepository(
     private val coinMarketCapService: CoinMarketCapService,
 ) : ICoinRepository {
 
-    override suspend fun getCoinList(perPage: Int, page: Int): List<Coin> {
-        return coingeckoService.getCoinList(perPage, page).map { it.toCoin() }
+    override suspend fun getCoinList(perPage: Int, page: Int): Flow<List<Coin>> {
+        return flow {
+            val coinResponse  = coingeckoService.getCoinList(perPage, page)
+            emit(coinResponse.map { it.toCoin() })
+        }
     }
 
     override suspend fun getListingsLatest(): List<Coin> {
@@ -22,6 +27,6 @@ class CoinRepository(
 }
 
 interface ICoinRepository {
-    suspend fun getCoinList(perPage: Int, page: Int): List<Coin>
+    suspend fun getCoinList(perPage: Int, page: Int): Flow<List<Coin>>
     suspend fun getListingsLatest(): List<Coin>
 }
