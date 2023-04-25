@@ -2,9 +2,8 @@ import SwiftUI
 import SharedModule
 import KMMViewModelSwiftUI
 
-struct ContentView: View {
+struct CoinListView: View {
     @StateViewModel var viewModel: MarketCoinListViewModel = CoinListViewModel()
-    @State var coins: [Coin] = [Coin]()
 
     var body: some View {
         VStack() {
@@ -24,14 +23,14 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVStack {
-                    ForEach(coins.indices, id: \.self) { index in
-                        CoinItem(coin: coins[index], index: index)
+                    ForEach(viewModel.marketCoinListViewModelState.coins.indices, id: \.self) { index in
+                        CoinItem(coin: viewModel.marketCoinListViewModelState.coins[index], index: index)
                     }
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
         }.onAppear{
-            Task {
-                coins = try await self.viewModel.getCoinList()
+            Task { @MainActor in
+                try await self.viewModel.getCoinList(perPage: 100, page: 1)
             }
         }
     }
