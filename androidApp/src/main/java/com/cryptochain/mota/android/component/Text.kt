@@ -47,7 +47,8 @@ fun BoldText(
     modifier: Modifier = Modifier,
     content: String,
     color: Color = MaterialTheme.colors.secondary,
-    fontSize: TextUnit = getFontSize10sp()
+    fontSize: TextUnit = getFontSize10sp(),
+    maxLines: Int = 2
 ) {
     Text(
         modifier = modifier,
@@ -55,6 +56,7 @@ fun BoldText(
         color = color,
         fontSize = fontSize,
         fontWeight = FontWeight.Bold,
-        fontFamily = MaterialTheme.typography.body1.fontFamily
+        fontFamily = MaterialTheme.typography.body1.fontFamily,
+        maxLines = maxLines
     )
 }

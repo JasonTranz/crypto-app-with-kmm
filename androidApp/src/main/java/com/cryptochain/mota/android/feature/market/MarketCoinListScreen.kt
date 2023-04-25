@@ -12,9 +12,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -22,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.cryptochain.mota.android.component.BoldText
 import com.cryptochain.mota.android.component.RegularImage
 import com.cryptochain.mota.android.component.RegularText
@@ -35,12 +36,20 @@ import com.cryptochain.mota.android.component.smallSpace
 import com.cryptochain.mota.android.component.tinySpace
 import com.cryptochain.mota.android.util.UnitUtil.formatPercentage
 import com.cryptochain.mota.model.Coin
+import com.cryptochain.mota.viewModel.MarketCoinListViewModel
 
 @Composable
 fun MarketCoinListScreen(
-    coins: List<Coin>,
-    navController: NavController
+    marketCoinListViewModel: MarketCoinListViewModel
 ) {
+    val marketCoinListViewModelDataState by remember { marketCoinListViewModel.marketCoinListViewModelState }.collectAsState()
+    val coins = marketCoinListViewModelDataState.coins
+    val errorMsg = marketCoinListViewModelDataState.errorMsg
+
+    LaunchedEffect(true) {
+        marketCoinListViewModel.getCoinList()
+    }
+
     BackHandler(false) { }
 
     Column(
@@ -97,11 +106,16 @@ fun MarketCoinListScreen(
         LazyColumn {
             itemsIndexed(coins) { index, item ->
                 CoinItem(coin = item, index = index)
-                Divider(
-                    modifier = Modifier
-                        .height(1.dp)
-                        .fillMaxWidth()
-                )
+            }
+        }
+
+        errorMsg?.let { message ->
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                RegularText(content = message)
             }
         }
     }
@@ -115,6 +129,7 @@ private fun CoinItem(
 ) {
     val height = remember { mutableStateOf(0.dp) }
     val localDensity = LocalDensity.current
+
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -144,6 +159,7 @@ private fun CoinItem(
                 BoldText(
                     content = coin.name,
                     fontSize = getFontSize13sp(),
+                    maxLines = 1
                 )
 
                 Spacer(modifier = Modifier.height(tinySpace()))

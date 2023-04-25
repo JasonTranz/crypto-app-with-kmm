@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.SideEffect
 import androidx.core.view.WindowCompat
-import com.cryptochain.mota.android.feature.main.MainScreen
+import com.cryptochain.mota.android.feature.home.HomeScreen
 import com.cryptochain.mota.android.theme.ApplicationTheme
 import com.cryptochain.mota.viewModel.MarketCoinListViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
                     )
                 }
 
-                MainScreen(viewModel)
+                HomeScreen(viewModel)
             }
         }
     }
