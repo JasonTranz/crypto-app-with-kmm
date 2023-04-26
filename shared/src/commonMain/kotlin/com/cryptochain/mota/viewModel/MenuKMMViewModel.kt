@@ -6,7 +6,7 @@ import com.cryptochain.mota.db.SharePreferences
 import com.rickclephas.kmm.viewmodel.KMMViewModel
 import org.koin.core.component.KoinComponent
 
-open class MenuViewModel : KMMViewModel(), KoinComponent {
+open class MenuKMMViewModel : KMMViewModel(), KoinComponent {
 
     open fun setProtectedState(context: SPref, isProtected: Boolean) {
         val spr = SharePreferences(context)

@@ -16,7 +16,7 @@ import com.cryptochain.mota.android.feature.root.BottomNavigationBar
 import com.cryptochain.mota.android.feature.root.BottomNavigationItem
 import com.cryptochain.mota.android.feature.search.SearchScreen
 import com.cryptochain.mota.viewModel.CoinListKMMViewModel
-import com.cryptochain.mota.viewModel.MenuViewModel
+import com.cryptochain.mota.viewModel.MenuKMMViewModel
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.rememberPagerState
@@ -25,7 +25,7 @@ import com.google.accompanist.pager.rememberPagerState
 @Composable
 fun HomeScreen(
     coinListKMMViewModel: CoinListKMMViewModel,
-    menuViewModel: MenuViewModel
+    menuKMMViewModel: MenuKMMViewModel
 ) {
     val pagerState = rememberPagerState(initialPage = 0)
 
@@ -66,7 +66,7 @@ fun HomeScreen(
                     }
 
                     4 -> {
-                        MenuScreen(menuViewModel = menuViewModel)
+                        MenuScreen(menuKMMViewModel = menuKMMViewModel)
                     }
                 }
             }

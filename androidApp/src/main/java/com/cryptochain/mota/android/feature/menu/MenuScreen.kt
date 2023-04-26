@@ -18,22 +18,22 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.cryptochain.mota.android.component.RegularText
 import com.cryptochain.mota.db.SPref
-import com.cryptochain.mota.viewModel.MenuViewModel
+import com.cryptochain.mota.viewModel.MenuKMMViewModel
 
 @Composable
 fun MenuScreen(
-    menuViewModel: MenuViewModel
+    menuKMMViewModel: MenuKMMViewModel
 ) {
     val context = LocalContext.current
     val protectedState = remember { mutableStateOf(false) }
 
     LaunchedEffect(true) {
-        protectedState.value = menuViewModel.getProtectedState(context as SPref)
+        protectedState.value = menuKMMViewModel.getProtectedState(context as SPref)
     }
 
     fun onSwitchProtectedState(isChecked: Boolean) {
         protectedState.value = isChecked
-        menuViewModel.setProtectedState(context = context as SPref, isProtected = isChecked)
+        menuKMMViewModel.setProtectedState(context = context as SPref, isProtected = isChecked)
     }
 
     Column(
