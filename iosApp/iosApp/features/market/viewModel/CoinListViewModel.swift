@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import SwiftUI
 import SharedModule
 
-class CoinListViewModel: SharedModule.MarketCoinListViewModel {
-    
+class CoinListViewModel: SharedModule.CoinListKMMViewModel {
+
     override func getCoinList(perPage: Int32, page: Int32) async throws {
         try await super.getCoinList(perPage: 100, page: 1)
     }

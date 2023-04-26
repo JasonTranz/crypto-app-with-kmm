@@ -46,27 +46,3 @@ struct HomeScreen: View {
         }
     }
 }
-
-struct PortfolioView: View {
-    var body: some View {
-        Text("Portfolio")
-    }
-}
-
-struct SearchView: View {
-    var body: some View {
-        Text("Search")
-    }
-}
-
-struct ExploreView: View {
-    var body: some View {
-        Text("Explore")
-    }
-}
-
-struct MenuView: View {
-    var body: some View {
-        Text("Menu")
-    }
-}
