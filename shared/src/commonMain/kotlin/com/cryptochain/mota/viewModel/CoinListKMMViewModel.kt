@@ -17,15 +17,15 @@ import kotlinx.coroutines.flow.update
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-open class MarketCoinListViewModel : KMMViewModel(), KoinComponent {
+open class CoinListKMMViewModel : KMMViewModel(), KoinComponent {
 
     private val coinRepository: CoinRepository by inject()
     private val database: Database by inject()
 
-    private val _marketCoinListViewModelState = MutableStateFlow(viewModelScope, MarketCoinModelState())
+    private val _coinListViewModelState = MutableStateFlow(viewModelScope, CoinListModelState())
 
     @NativeCoroutinesState
-    val marketCoinListViewModelState = _marketCoinListViewModelState.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), MarketCoinModelState())
+    val coinListViewModelState = _coinListViewModelState.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), CoinListModelState())
 
     open suspend fun getCoinList(perPage: Int = 100, page: Int = 1) {
         coinRepository.getCoinList(perPage = perPage, page = page)
@@ -39,11 +39,11 @@ open class MarketCoinListViewModel : KMMViewModel(), KoinComponent {
                 database.addCoins(coins.map { it.toCoinLocal() })
             }
             .catch { throwable ->
-                _marketCoinListViewModelState.update { it.copy(errorMsg = throwable.message ?: "") }
+                _coinListViewModelState.update { it.copy(errorMsg = throwable.message ?: "") }
             }
             .collect { remoteList ->
                 val finalList = remoteList.ifEmpty { database.getCoins().map { it.toCoin() } }
-                _marketCoinListViewModelState.update { it.copy(coins = finalList) }
+                _coinListViewModelState.update { it.copy(coins = finalList) }
             }
     }
 }
