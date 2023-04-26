@@ -36,18 +36,18 @@ import com.cryptochain.mota.android.component.smallSpace
 import com.cryptochain.mota.android.component.tinySpace
 import com.cryptochain.mota.android.util.UnitUtil.formatPercentage
 import com.cryptochain.mota.model.Coin
-import com.cryptochain.mota.viewModel.MarketCoinListViewModel
+import com.cryptochain.mota.viewModel.CoinListKMMViewModel
 
 @Composable
-fun MarketCoinListScreen(
-    marketCoinListViewModel: MarketCoinListViewModel
+fun CoinListScreen(
+    coinListKMMViewModel: CoinListKMMViewModel
 ) {
-    val marketCoinListViewModelDataState by remember { marketCoinListViewModel.marketCoinListViewModelState }.collectAsState()
-    val coins = marketCoinListViewModelDataState.coins
-    val errorMsg = marketCoinListViewModelDataState.errorMsg
+    val coinListViewModelState by remember { coinListKMMViewModel.coinListViewModelState }.collectAsState()
+    val coins = coinListViewModelState.coins
+    val errorMsg = coinListViewModelState.errorMsg
 
     LaunchedEffect(true) {
-        marketCoinListViewModel.getCoinList()
+        coinListKMMViewModel.getCoinList()
     }
 
     BackHandler(false) { }

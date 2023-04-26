@@ -8,14 +8,14 @@ import androidx.compose.runtime.SideEffect
 import androidx.core.view.WindowCompat
 import com.cryptochain.mota.android.feature.home.HomeScreen
 import com.cryptochain.mota.android.theme.ApplicationTheme
-import com.cryptochain.mota.viewModel.MarketCoinListViewModel
+import com.cryptochain.mota.viewModel.CoinListKMMViewModel
 import com.cryptochain.mota.viewModel.MenuViewModel
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
 class MainActivity : ComponentActivity(), KoinComponent {
-    private val coinListViewModel: MarketCoinListViewModel by inject()
+    private val coinListKMMViewModel: CoinListKMMViewModel by inject()
     private val menuViewModel: MenuViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
                 }
 
                 HomeScreen(
-                    coinListViewModel = coinListViewModel,
+                    coinListKMMViewModel = coinListKMMViewModel,
                     menuViewModel = menuViewModel
                 )
             }

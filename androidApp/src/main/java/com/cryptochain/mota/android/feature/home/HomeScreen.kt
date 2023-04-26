@@ -9,13 +9,13 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.cryptochain.mota.android.feature.explore.ExploreScreen
-import com.cryptochain.mota.android.feature.market.MarketCoinListScreen
+import com.cryptochain.mota.android.feature.market.CoinListScreen
 import com.cryptochain.mota.android.feature.menu.MenuScreen
 import com.cryptochain.mota.android.feature.portfolio.PortfolioScreen
 import com.cryptochain.mota.android.feature.root.BottomNavigationBar
 import com.cryptochain.mota.android.feature.root.BottomNavigationItem
 import com.cryptochain.mota.android.feature.search.SearchScreen
-import com.cryptochain.mota.viewModel.MarketCoinListViewModel
+import com.cryptochain.mota.viewModel.CoinListKMMViewModel
 import com.cryptochain.mota.viewModel.MenuViewModel
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -24,7 +24,7 @@ import com.google.accompanist.pager.rememberPagerState
 @OptIn(ExperimentalPagerApi::class)
 @Composable
 fun HomeScreen(
-    coinListViewModel: MarketCoinListViewModel,
+    coinListKMMViewModel: CoinListKMMViewModel,
     menuViewModel: MenuViewModel
 ) {
     val pagerState = rememberPagerState(initialPage = 0)
@@ -50,7 +50,7 @@ fun HomeScreen(
             ) {
                 when (it) {
                     0 -> {
-                        MarketCoinListScreen(marketCoinListViewModel = coinListViewModel)
+                        CoinListScreen(coinListKMMViewModel = coinListKMMViewModel)
                     }
 
                     1 -> {
