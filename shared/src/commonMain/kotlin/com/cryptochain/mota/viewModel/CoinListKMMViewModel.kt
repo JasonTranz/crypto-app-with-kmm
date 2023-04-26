@@ -3,6 +3,7 @@ package com.cryptochain.mota.viewModel
 import com.cryptochain.mota.db.Database
 import com.cryptochain.mota.mapper.toCoin
 import com.cryptochain.mota.mapper.toCoinLocal
+import com.cryptochain.mota.model.CoinListModelState
 import com.cryptochain.mota.repository.CoinRepository
 import com.rickclephas.kmm.viewmodel.KMMViewModel
 import com.rickclephas.kmm.viewmodel.MutableStateFlow
