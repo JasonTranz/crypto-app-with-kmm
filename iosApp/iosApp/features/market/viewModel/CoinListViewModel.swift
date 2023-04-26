@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftUI
 import SharedModule
 
 class CoinListViewModel: SharedModule.CoinListKMMViewModel {
