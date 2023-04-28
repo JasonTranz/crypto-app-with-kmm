@@ -24,11 +24,12 @@
 
 🏆 MIT
 
-## Features
-- Market list.
-- Portfolio.
-- Warning price.
-- High setting.
+## Libraries
+- SqlDelight
+- SharePreference
+- Ktor
+- NativeCoroutines
+- KMM-MVVM
 
 ## How to Contribute
 Please contact me via: huutq98@gmail.com
