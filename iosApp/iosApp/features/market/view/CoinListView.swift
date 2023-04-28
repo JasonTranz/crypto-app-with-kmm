@@ -2,9 +2,9 @@ import SwiftUI
 import SharedModule
 import KMMViewModelSwiftUI
 
-struct ContentView: View {
-    @StateViewModel var viewModel: MarketCoinListViewModel = CoinListViewModel()
-    @State var coins: [Coin] = [Coin]()
+struct CoinListView: View {
+    @StateViewModel var viewModel: CoinListKMMViewModel = CoinListViewModel()
+    var coins: [Coin] { return viewModel.coinListViewModelState.coins }
 
     var body: some View {
         VStack() {
@@ -19,7 +19,7 @@ struct ContentView: View {
                     Text("24h")
                         .frame(width: geo.size.width * 0.2)
                 }.frame(maxWidth: .infinity).fixedSize()
-            }.frame(width: .infinity, height: 20)
+            }.frame(maxWidth: .infinity).frame(height: 20)
                 .padding(.trailing, 16).padding(.leading, 16)
             
             ScrollView {
@@ -30,8 +30,8 @@ struct ContentView: View {
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
         }.onAppear{
-            Task {
-                coins = try await self.viewModel.getCoinList()
+            Task { @MainActor in
+                try await self.viewModel.getCoinList(perPage: 100, page: 1)
             }
         }
     }
@@ -83,7 +83,7 @@ struct CoinItem: View {
                     .foregroundColor(percentageColor)
                 
             }.frame(maxWidth: .infinity).fixedSize()
-        }.frame(width: .infinity, height: 25)
+        }.frame(maxWidth: .infinity).frame(height: 25)
             .padding(.trailing, 16)
             .padding(.leading, 16)
             .padding(.bottom, 14)

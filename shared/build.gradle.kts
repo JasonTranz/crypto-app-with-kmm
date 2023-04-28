@@ -4,6 +4,7 @@ plugins {
     kotlin("plugin.serialization")
     id("com.android.library")
     id("maven-publish")
+    id("com.squareup.sqldelight")
     @Suppress("DSL_SCOPE_VIOLATION")
     alias(libs.plugins.google.ksp)
     @Suppress("DSL_SCOPE_VIOLATION")
@@ -57,6 +58,8 @@ kotlin {
                 implementation(libs.io.koin.core)
                 implementation(libs.firestore.shared)
                 implementation(libs.kmm.viewmodel.core)
+
+                implementation(libs.sql.delight.runtime)
             }
         }
         val commonTest by getting {
@@ -69,6 +72,7 @@ kotlin {
                 implementation(libs.io.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.viewmodel.ktx)
                 implementation(libs.firestore.android)
+                implementation(libs.sql.delight.android)
             }
         }
 
@@ -82,6 +86,7 @@ kotlin {
             iosSimulatorArm64Main.dependsOn(this)
             dependencies {
                 implementation(libs.io.ktor.client.darwin)
+                implementation(libs.sql.delight.ios)
             }
         }
         val iosX64Test by getting
@@ -102,5 +107,13 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 33
+    }
+}
+
+sqldelight {
+    database("MotaDatabase") {
+        packageName = "db"
+        sourceFolders = listOf("sqldelight")
+//        schemaOutputDirectory = file("build/dbs")
     }
 }

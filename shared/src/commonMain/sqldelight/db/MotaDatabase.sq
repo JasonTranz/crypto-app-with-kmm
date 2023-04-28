@@ -1,0 +1,21 @@
+CREATE TABLE CoinLocal (
+    id TEXT NOT NULL PRIMARY KEY,
+    symbol TEXT NOT NULL,
+    name TEXT NOT NULL,
+    price REAL NOT NULL,
+    imageUrl TEXT NOT NULL,
+    priceChangePercentage24h REAL NOT NULL
+);
+
+insert:
+INSERT INTO CoinLocal(id, symbol, name, price, imageUrl, priceChangePercentage24h)
+VALUES(?, ?, ?, ?, ?, ?);
+
+getAll:
+SELECT * FROM CoinLocal;
+
+getById:
+SELECT * FROM CoinLocal WHERE id = ?;
+
+deleteAll:
+DELETE FROM CoinLocal;

@@ -1,5 +1,7 @@
 package com.cryptochain.mota.di
 
 fun appModule() = listOf(
-    coinModule
+    platformModule(),
+    coinModule,
+    menuModule
 )
