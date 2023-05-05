@@ -18,11 +18,7 @@ kotlin {
         iosX64(),
         iosArm64(),
         iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "SharedModule"
-        }
-    }
+    )
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -32,6 +28,7 @@ kotlin {
         podfile = project.file("../iosApp/Podfile")
         framework {
             baseName = "SharedModule"
+            binaryOption("bundleId", "com.cryptochain.mota.shared")
         }
     }
 
@@ -56,7 +53,6 @@ kotlin {
                 implementation(libs.io.ktor.serialization.kotlinx.json)
 
                 implementation(libs.io.koin.core)
-                implementation(libs.firestore.shared)
                 implementation(libs.kmm.viewmodel.core)
 
                 implementation(libs.sql.delight.runtime)
@@ -71,7 +67,6 @@ kotlin {
             dependencies {
                 implementation(libs.io.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.viewmodel.ktx)
-                implementation(libs.firestore.android)
                 implementation(libs.sql.delight.android)
             }
         }
@@ -114,6 +109,5 @@ sqldelight {
     database("MotaDatabase") {
         packageName = "db"
         sourceFolders = listOf("sqldelight")
-//        schemaOutputDirectory = file("build/dbs")
     }
 }
