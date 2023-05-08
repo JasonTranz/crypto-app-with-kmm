@@ -3,6 +3,7 @@ plugins {
     id("com.android.application")
 }
 
+@Suppress("UnstableApiUsage")
 android {
     namespace = "com.cryptochain.mota.android"
     compileSdk = 33
@@ -17,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.0"
+        kotlinCompilerExtensionVersion = "1.4.6"
     }
     packagingOptions {
         resources {

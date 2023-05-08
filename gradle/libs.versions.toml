@@ -18,7 +18,7 @@ gradlePlugin = "7.3.1"
 lintMinCompose = "30.0.0"
 
 ktlint = "0.45.2"
-kotlin = "1.8.0"
+kotlin = "1.8.20"
 coroutines = "1.6.4"
 okhttp = "3.12.13"
 coil = "2.2.2"
@@ -26,7 +26,7 @@ coil = "2.2.2"
 firestore-shared = "0.2.5"
 firestore-android = "24.4.5"
 
-ksp = "1.8.0-1.0.9"
+ksp = "1.8.20-1.0.10"
 nativecoroutines = "1.0.0-ALPHA-5"
 sql-delight = "1.5.5"
 
