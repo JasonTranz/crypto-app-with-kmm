@@ -14,7 +14,7 @@ ktor = "2.1.2"
 google-services = "4.3.14"
 
 # gradlePlugin and lint need to be updated together
-gradlePlugin = "8.0.0"
+gradlePlugin = "7.3.0"
 lintMinCompose = "30.0.0"
 
 ktlint = "0.45.2"
