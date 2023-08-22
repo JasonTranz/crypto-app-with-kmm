@@ -1,10 +1,12 @@
 package com.cryptochain.mota.android.feature.root
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.MaterialTheme
@@ -20,11 +22,9 @@ import com.cryptochain.mota.android.component.RegularText
 import com.cryptochain.mota.android.component.getBottomNavBarDisplayHeight
 import com.cryptochain.mota.android.component.getBottomNavBarHeight
 import com.cryptochain.mota.android.component.tinySpace
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.PagerState
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun BottomNavigationBar(
     pagerState: PagerState,

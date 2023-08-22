@@ -1,20 +1,20 @@
 [versions]
-androidx-lifecycle = "2.6.0-alpha03"
+androidx-lifecycle = "2.6.1"
 
-compose = "1.4.0"
+compose = "1.5.0"
 composeCompiler = "1.4.0"
-accompanist = "0.26.5-rc"
+accompanist = "0.30.1"
 
-intuit = "1.0.6"
+intuit = "1.1.0"
 
 kmmViewmodelCore = "1.0.0-ALPHA-3"
 koin = "3.2.0"
 ktor = "2.1.2"
 
-google-services = "4.3.14"
+google-services = "4.3.15"
 
 # gradlePlugin and lint need to be updated together
-gradlePlugin = "7.3.0"
+gradlePlugin = "8.1.1"
 lintMinCompose = "30.0.0"
 
 ktlint = "0.45.2"
@@ -23,12 +23,13 @@ coroutines = "1.6.4"
 okhttp = "3.12.13"
 coil = "2.2.2"
 
-firestore-shared = "0.2.5"
-firestore-android = "24.4.5"
+firebase-firestore = "1.8.1"
+services = "4.3.15"
 
 ksp = "1.8.20-1.0.10"
 nativecoroutines = "1.0.0-ALPHA-5"
 sql-delight = "1.5.5"
+firebaseCommonKtx = "20.3.3"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
@@ -73,13 +74,14 @@ io-ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", v
 io-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
-firestore-shared = { module = "co.touchlab:firestore", version.ref = "firestore-shared" }
-firestore-android = { module = "com.google.firebase:firebase-firestore", version.ref = "firestore-android" }
+firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebase-firestore" }
+services = { module = "com.google.gms:google-services", version.ref = "services" }
 
 sql-delight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sql-delight" }
 sql-delight-gradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sql-delight" }
 sql-delight-android = { module = "com.squareup.sqldelight:android-driver", version.ref = "sql-delight" }
 sql-delight-ios = { module = "com.squareup.sqldelight:native-driver", version.ref = "sql-delight" }
+firebase-common-ktx = { group = "com.google.firebase", name = "firebase-common-ktx", version.ref = "firebaseCommonKtx" }
 
 [plugins]
 nativecoroutines = { id = "com.rickclephas.kmp.nativecoroutines", version.ref = "nativecoroutines" }

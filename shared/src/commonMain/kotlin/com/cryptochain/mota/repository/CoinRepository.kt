@@ -8,7 +8,6 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-@OptIn(FlowPreview::class)
 class CoinRepository(
     private val coingeckoService: CoingeckoService,
     private val coinMarketCapService: CoinMarketCapService,

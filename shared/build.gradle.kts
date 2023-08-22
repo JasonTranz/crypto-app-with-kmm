@@ -29,6 +29,7 @@ kotlin {
         framework {
             baseName = "SharedModule"
             binaryOption("bundleId", "com.cryptochain.mota.shared")
+            isStatic = true
         }
     }
 
@@ -56,6 +57,8 @@ kotlin {
                 implementation(libs.kmm.viewmodel.core)
 
                 implementation(libs.sql.delight.runtime)
+
+                implementation(libs.firebase.firestore)
             }
         }
         val commonTest by getting {
@@ -68,6 +71,7 @@ kotlin {
                 implementation(libs.io.ktor.client.okhttp)
                 implementation(libs.androidx.lifecycle.viewmodel.ktx)
                 implementation(libs.sql.delight.android)
+                implementation(platform("com.google.firebase:firebase-bom:32.0.0"))
             }
         }
 
@@ -98,15 +102,14 @@ kotlin {
 
 android {
     namespace = "com.cryptochain.mota"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         minSdk = 24
-        targetSdk = 33
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 

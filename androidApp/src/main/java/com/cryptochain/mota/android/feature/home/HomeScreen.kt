@@ -1,9 +1,12 @@
 package com.cryptochain.mota.android.feature.home
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
@@ -17,24 +20,27 @@ import com.cryptochain.mota.android.feature.root.BottomNavigationItem
 import com.cryptochain.mota.android.feature.search.SearchScreen
 import com.cryptochain.mota.viewModel.CoinListKMMViewModel
 import com.cryptochain.mota.viewModel.MenuKMMViewModel
-import com.google.accompanist.pager.ExperimentalPagerApi
-import com.google.accompanist.pager.HorizontalPager
-import com.google.accompanist.pager.rememberPagerState
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
     coinListKMMViewModel: CoinListKMMViewModel,
     menuKMMViewModel: MenuKMMViewModel
 ) {
-    val pagerState = rememberPagerState(initialPage = 0)
-
     val bottomNavigationItems = listOf(
         BottomNavigationItem.Home,
         BottomNavigationItem.Portfolio,
         BottomNavigationItem.Search,
         BottomNavigationItem.Explore,
         BottomNavigationItem.Menu
+    )
+
+    val pagerState = rememberPagerState(
+        initialPage = 0,
+        initialPageOffsetFraction = 0f,
+        pageCount = {
+            bottomNavigationItems.size
+        }
     )
 
     Scaffold(
@@ -45,7 +51,7 @@ fun HomeScreen(
                     .background(color = MaterialTheme.colors.background)
                     .statusBarsPadding()
                     .padding(paddingValues),
-                count = bottomNavigationItems.size,
+                beyondBoundsPageCount = bottomNavigationItems.size,
                 state = pagerState
             ) {
                 when (it) {

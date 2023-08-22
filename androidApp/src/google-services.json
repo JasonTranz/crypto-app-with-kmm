@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:46517895022:android:f2c75f1a991bc5acfa4b7f",
+        "mobilesdk_app_id": "1:46517895022:android:81b8b4aa1f81c18afa4b7f",
         "android_client_info": {
-          "package_name": "com.cryptochain.mota"
+          "package_name": "com.cryptochain.mota.android"
         }
       },
       "oauth_client": [

@@ -1,16 +1,16 @@
 plugins {
     kotlin("android")
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
-@Suppress("UnstableApiUsage")
 android {
     namespace = "com.cryptochain.mota.android"
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.cryptochain.mota.android"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
@@ -20,23 +20,24 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.6"
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -65,4 +66,7 @@ dependencies {
     implementation(libs.kmm.viewmodel.core)
 
     implementation(libs.sql.delight.android)
+    implementation(libs.firebase.common.ktx)
+
+    implementation(libs.services)
 }
