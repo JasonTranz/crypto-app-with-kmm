@@ -7,4 +7,13 @@ captures
 .externalNativeBuild
 .cxx
 local.properties
-xcuserdata
+
+# Android
+google-services.json
+
+# iOS
+GoogleService-Info.plist
+xcuserdata/
+Pods/
+*.jks
+*yarn.lock
