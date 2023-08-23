@@ -4,5 +4,6 @@ fun appModule() = listOf(
     platformModule(),
     coinModule,
     menuModule,
+    storageModule,
     firebaseModule
 )
