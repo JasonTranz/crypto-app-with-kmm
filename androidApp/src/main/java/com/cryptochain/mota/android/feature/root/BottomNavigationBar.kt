@@ -13,6 +13,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -47,10 +48,24 @@ fun BottomNavigationBar(
                         painter = painterResource(id = item.resIconId),
                         modifier = Modifier.size(20.dp),
                         contentScale = ContentScale.Crop,
+                        colorFilter = if (selected) {
+                            ColorFilter.tint(MaterialTheme.colors.secondary)
+                        } else {
+                            ColorFilter.tint(MaterialTheme.colors.secondaryVariant)
+                        },
                         contentDescription = ""
                     )
                 },
-                label = { RegularText(content = stringResource(id = item.resTitleId)) },
+                label = {
+                    RegularText(
+                        content = stringResource(id = item.resTitleId),
+                        color = if (selected) {
+                            MaterialTheme.colors.secondary
+                        } else {
+                            MaterialTheme.colors.secondaryVariant
+                        }
+                    )
+                },
                 selectedContentColor = MaterialTheme.colors.secondary,
                 unselectedContentColor = MaterialTheme.colors.secondaryVariant,
                 alwaysShowLabel = true,
@@ -66,9 +81,33 @@ fun BottomNavigationBar(
 }
 
 sealed class BottomNavigationItem(var route: String, var resIconId: Int, var resTitleId: Int) {
-    object Home : BottomNavigationItem("home", R.drawable.ic_bottom_navigation_home, R.string.bottom_navigation_home)
-    object Portfolio : BottomNavigationItem("portfolio", R.drawable.ic_bottom_navigation_portfolio, R.string.bottom_navigation_portfolio)
-    object Search : BottomNavigationItem("search", R.drawable.ic_bottom_navigation_search, R.string.bottom_navigation_search)
-    object Explore : BottomNavigationItem("explore", R.drawable.ic_bottom_navigation_explore, R.string.bottom_navigation_explore)
-    object Menu : BottomNavigationItem("menu", R.drawable.ic_bottom_navigation_menu, R.string.bottom_navigation_menu)
+    data object Home : BottomNavigationItem(
+        "home",
+        R.drawable.ic_bottom_navigation_home,
+        R.string.bottom_navigation_home
+    )
+
+    data object Portfolio : BottomNavigationItem(
+        "portfolio",
+        R.drawable.ic_bottom_navigation_portfolio,
+        R.string.bottom_navigation_portfolio
+    )
+
+    data object Search : BottomNavigationItem(
+        "search",
+        R.drawable.ic_bottom_navigation_search,
+        R.string.bottom_navigation_search
+    )
+
+    data object Explore : BottomNavigationItem(
+        "explore",
+        R.drawable.ic_bottom_navigation_explore,
+        R.string.bottom_navigation_explore
+    )
+
+    data object Menu : BottomNavigationItem(
+        "menu",
+        R.drawable.ic_bottom_navigation_menu,
+        R.string.bottom_navigation_menu
+    )
 }
