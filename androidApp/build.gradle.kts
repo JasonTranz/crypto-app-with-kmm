@@ -18,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.6"
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
     packaging {
         resources {
@@ -68,5 +68,5 @@ dependencies {
     implementation(libs.sql.delight.android)
     implementation(libs.firebase.common.ktx)
 
-    implementation(libs.services)
+    implementation(libs.google.services)
 }

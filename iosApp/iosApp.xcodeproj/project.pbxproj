@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		CE6C4DBB29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE6C4DBA29DBDDB7009AE05A /* KMPNativeCoroutinesRxSwift */; };
 		CE90C68029DAD6F1003C6751 /* KMMViewModelCore in Frameworks */ = {isa = PBXBuildFile; productRef = CE90C67F29DAD6F1003C6751 /* KMMViewModelCore */; };
 		CE90C68229DAD6F1003C6751 /* KMMViewModelSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CE90C68129DAD6F1003C6751 /* KMMViewModelSwiftUI */; };
+		F9AF377D2A9672A5000A8B5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9AF377C2A9672A5000A8B5E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		CE14681F29DAB53F007882E0 /* KMMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMMViewModel.swift; sourceTree = "<group>"; };
 		CE14682129DAB5C7007882E0 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
 		CE5702EE29DEA44A00741DB0 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		F9AF377C2A9672A5000A8B5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9AF377C2A9672A5000A8B5E /* GoogleService-Info.plist */,
 				6BE5DBE529F76E5F00324A49 /* util */,
 				6BE5DBE429F76DEC00324A49 /* common */,
 				6BE5DBE029F76D7000324A49 /* features */,
@@ -342,6 +345,7 @@
 			files = (
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
 				058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */,
+				F9AF377D2A9672A5000A8B5E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

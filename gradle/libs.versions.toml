@@ -1,35 +1,29 @@
 [versions]
-androidx-lifecycle = "2.6.1"
-
-compose = "1.5.0"
-composeCompiler = "1.4.0"
+androidx-lifecycle = "2.6.2"
 accompanist = "0.30.1"
+
+compose = "1.5.4"
+composeCompiler = "1.5.3"
+coroutines = "1.7.3"
+coil = "2.4.0"
 
 intuit = "1.1.0"
 
+kotlin = "1.9.10"
+koin = "3.4.3"
+ktor = "2.3.2"
+ksp = "1.9.10-1.0.13"
 kmmViewmodelCore = "1.0.0-ALPHA-3"
-koin = "3.2.0"
-ktor = "2.1.2"
 
 google-services = "4.3.15"
-
 # gradlePlugin and lint need to be updated together
-gradlePlugin = "8.1.1"
-lintMinCompose = "30.0.0"
-
-ktlint = "0.45.2"
-kotlin = "1.8.20"
-coroutines = "1.6.4"
-okhttp = "3.12.13"
-coil = "2.2.2"
+gradlePlugin = "8.1.2"
 
 firebase-firestore = "1.8.1"
-services = "4.3.15"
 
-ksp = "1.8.20-1.0.10"
 nativecoroutines = "1.0.0-ALPHA-5"
 sql-delight = "1.5.5"
-firebaseCommonKtx = "20.3.3"
+firebaseCommonKtx = "20.4.2"
 
 [libraries]
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
@@ -75,7 +69,6 @@ io-ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-neg
 io-ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebase-firestore" }
-services = { module = "com.google.gms:google-services", version.ref = "services" }
 
 sql-delight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sql-delight" }
 sql-delight-gradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sql-delight" }
