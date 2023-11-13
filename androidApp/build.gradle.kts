@@ -18,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.orNull
     }
     packaging {
         resources {
@@ -50,6 +50,8 @@ dependencies {
     implementation(libs.compose.foundation.foundation)
     implementation(libs.compose.foundation.layout)
     implementation(libs.compose.material.material)
+    implementation(libs.compose.constraint.layout)
+    implementation(libs.androidx.navigation)
 
     implementation(libs.intuit.ssp.android)
     implementation(libs.intuit.sdp.android)
